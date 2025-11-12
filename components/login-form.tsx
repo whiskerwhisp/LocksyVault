@@ -65,10 +65,10 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="bg-[#52243a]">
         <CardHeader>
-          <CardTitle>Login to your account</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-white text-center">Login to your account</CardTitle>
+          <CardDescription className="text-[#c883c5] text-center">
             Enter your email below to login to your account
           </CardDescription>
         </CardHeader>
@@ -80,18 +80,19 @@ export function LoginForm({
                   {error}
                 </div>
               )}
-              <Field>
+              <Field className="text-white">
                 <FieldLabel htmlFor="email">Email</FieldLabel>
-                <Input
+                <Input 
                   id="email"
                   type="email"
                   placeholder="m@example.com"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
+                  className="placeholder:text-[#c883c5]"
+               />
               </Field>
-              <Field>
+              <Field className="text-white">
                 <div className="flex items-center">
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                 </div>
@@ -104,10 +105,10 @@ export function LoginForm({
                 />
               </Field>
               <Field>
-                <Button type="submit" disabled={loading}>
+                <Button className="bg-[#8a3c63]" type="submit" disabled={loading}>
                   {loading ? "Logging in..." : "Login"}
                 </Button>
-                <FieldDescription className="text-center">
+                <FieldDescription className="text-center text-[#c883c5]">
                   Don&apos;t have an account? <Link href="/signup">Sign up</Link>
                 </FieldDescription>
               </Field>

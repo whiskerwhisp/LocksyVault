@@ -77,10 +77,10 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   };
 
   return (
-    <Card {...props}>
+    <Card {...props} className="bg-[#52243a]">
       <CardHeader>
-        <CardTitle>Create an account</CardTitle>
-         <CardDescription>
+        <CardTitle className="text-white text-center">Create an account</CardTitle>
+         <CardDescription className="text-[#bf90bd]">
           Enter your information below to create your account
         </CardDescription>
       </CardHeader>
@@ -92,8 +92,8 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 {error}
               </div>
             )}
-            <Field>
-              <FieldLabel htmlFor="name">Full Name</FieldLabel>
+            <Field className="text-white">
+              <FieldLabel htmlFor="name">Your Name</FieldLabel>
               <Input 
                 id="name" 
                 type="text" 
@@ -103,12 +103,12 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               />
             </Field>
-            <Field>
+            <Field className="text-white">
               <FieldLabel htmlFor="email">Email</FieldLabel>
               <Input
                 id="email"
                 type="email"
-                placeholder="m@example.com"
+                placeholder="m@example.com" 
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -118,7 +118,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 with anyone else.
               </FieldDescription>
             </Field>
-            <Field>
+            <Field className="text-white">
               <FieldLabel htmlFor="password">Password</FieldLabel>
               <Input 
                 id="password" 
@@ -131,7 +131,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 Must be at least 8 characters long.
               </FieldDescription>
             </Field>
-            <Field>
+            <Field className="text-white">
               <FieldLabel htmlFor="confirm-password">
                 Confirm Password
               </FieldLabel>
