@@ -89,7 +89,7 @@ export function LoginForm({
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="placeholder:text-[#c883c5]"
+                  className="placeholder:text-[#c883c5] bg-[#703b55]"
                />
               </Field>
               <Field className="text-white">
@@ -102,6 +102,7 @@ export function LoginForm({
                   required 
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                  className="bg-[#703b55] placeholder:text-[#c883c5]"
                 />
               </Field>
               <Field>

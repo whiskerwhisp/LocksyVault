@@ -80,7 +80,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
     <Card {...props} className="bg-[#52243a]">
       <CardHeader>
         <CardTitle className="text-white text-center">Create an account</CardTitle>
-         <CardDescription className="text-[#bf90bd]">
+         <CardDescription className="text-[#c883c5]">
           Enter your information below to create your account
         </CardDescription>
       </CardHeader>
@@ -101,7 +101,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 required 
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
+                className="placeholder:text-[#c883c5] bg-[#703b55]"/>
             </Field>
             <Field className="text-white">
               <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -111,12 +111,8 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 placeholder="m@example.com" 
                 required
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              />
-              <FieldDescription>
-                We&apos;ll use this to contact you. We will not share your email
-                with anyone else.
-              </FieldDescription>
+                 className="placeholder:text-[#c883c5] bg-[#703b55]"
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}/>
             </Field>
             <Field className="text-white">
               <FieldLabel htmlFor="password">Password</FieldLabel>
@@ -126,30 +122,14 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 required 
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-              />
-              <FieldDescription>
-                Must be at least 8 characters long.
-              </FieldDescription>
-            </Field>
-            <Field className="text-white">
-              <FieldLabel htmlFor="confirm-password">
-                Confirm Password
-              </FieldLabel>
-              <Input 
-                id="confirm-password" 
-                type="password" 
-                required 
-                value={formData.confirmPassword}
-                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-              />
-              <FieldDescription>Please confirm your password.</FieldDescription>
+                className="placeholder:text-[#c883c5] bg-[#703b55]"/>
             </Field>
             <FieldGroup>
               <Field>
-                <Button type="submit" disabled={loading}>
+                <Button type="submit" disabled={loading} className="bg-[#8a3c63]">
                   {loading ? "Creating account..." : "Create Account"}
                 </Button>
-                <FieldDescription className="px-6 text-center">
+                <FieldDescription className="px-6 text-center text-[#c883c5]">
                   Already have an account? <Link href="/login">Sign in</Link>
                 </FieldDescription>
               </Field>
