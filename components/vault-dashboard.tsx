@@ -142,7 +142,7 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
     filterItems();
   }, [filterItems]);
 
-
+  
   const handleSave = async () => {
     const key = getEncryptionKey();
     if (!key) return;
@@ -582,10 +582,10 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-2 mt-4 sm:mt-6">
-                    <Button onClick={handleSave} className="w-full sm:w-auto text-sm">
+                    <Button type="button" onClick={handleSave} className="w-full sm:w-auto text-sm">
                       {editingItem ? "Update" : "Save"}
                     </Button>
-                    <Button variant="outline" onClick={resetForm} className="w-full sm:w-auto text-sm">
+                    <Button type="button" variant="outline" onClick={resetForm} className="w-full sm:w-auto text-sm">
                       Cancel
                     </Button>
                   </div>
