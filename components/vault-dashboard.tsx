@@ -39,7 +39,7 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
   const [items, setItems] = useState<DecryptedVaultItem[]>([]);
   const [filteredItems, setFilteredItems] = useState<DecryptedVaultItem[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [editingItem, setEditingItem] = useState<DecryptedVaultItem | null>(null);
@@ -649,7 +649,7 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
                       </Button>
                     </div>
                     <div className="text-center text-sm text-gray-600 mt-2">
-                      Don't have an account?{" "}
+                      Don&apos;t have an account?{" "}
                       <button
                         type="button"
                         onClick={() => {
