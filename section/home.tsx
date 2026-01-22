@@ -105,8 +105,7 @@ const Home = () => {
                             />
                         </label>
                     </div>
-
-                    <div className="flex justify-center mt-6">
+ <div className="flex justify-center mt-6">
                         <button 
                             onClick={handleGenerate}
                             className="border border-gray-300 rounded-lg px-4 py-2 hover:bg-[#E5E7EB]"
@@ -123,6 +122,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+                   
     )
 }
 
