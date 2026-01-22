@@ -131,8 +131,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 type="password" 
                 required 
                 value={formData.confirmPassword}
-                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-              />
+                onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}/>
               <FieldDescription>Please confirm your password.</FieldDescription>
             </Field>
             <FieldGroup>

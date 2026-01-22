@@ -118,9 +118,7 @@ export function LoginForm({
                   Don&apos;t have an account?{" "}
                   <Link
                     href="/signup"
-                    className="underline underline-offset-4"
-                  >
-                    Sign up
+                    className="underline underline-offset-4">Sign up
                   </Link>
                 </FieldDescription>
               </Field>

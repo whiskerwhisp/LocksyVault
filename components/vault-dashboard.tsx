@@ -107,7 +107,7 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
           return null;
         }
       }).filter(Boolean);
-
+      
       setItems(decryptedItems);
       setFilteredItems(decryptedItems);
     } catch (error) {
@@ -656,9 +656,7 @@ export default function VaultDashboard({ user, isAuthenticated, loading: authLoa
                           setShowLoginModal(false);
                           router.push("/signup");
                         }}
-                        className="text-blue-600 hover:underline"
-                      >
-                        Sign up
+                        className="text-blue-600 hover:underline">Sign up
                       </button>
                     </div>
                   </FieldGroup>
